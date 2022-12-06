@@ -34,6 +34,15 @@
 <div id="user">
 
 </div>
+<div id="user1">
+
+</div>
+<div id="user2">
+
+</div>
+<div id="user3">
+
+</div>
 
 <script type="application/javascript">
     Telegram.WebApp.ready();
@@ -57,7 +66,10 @@
         })
     }
 
-    document.querySelector('#user').innerHTML = Telegram.WebAppUser
+    document.querySelector('#user').innerHTML = Telegram.WebAppInfo
+    document.querySelector('#user1').innerHTML = Telegram.WebApp
+    document.querySelector('#user2').innerHTML = Telegram.WebApp.WebAppUser
+    document.querySelector('#user3').innerHTML = Telegram.WebApp.WebAppInfo
 
 </script>
 
