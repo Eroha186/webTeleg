@@ -69,7 +69,7 @@
     document.querySelector('#user').innerHTML = Telegram.WebAppInfo
     document.querySelector('#user1').innerHTML = Telegram.WebApp
     document.querySelector('#user2').innerHTML = Telegram.WebApp.WebAppUser
-    document.querySelector('#user3').innerHTML = Telegram.WebApp.version
+    document.querySelector('#user3').innerHTML = JSON.stringify(Telegram.WebApp.initDataUnsafe)
 
 </script>
 
