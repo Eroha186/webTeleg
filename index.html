@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        function setThemeClass() {
+            document.documentElement.className = Telegram.WebApp.colorScheme;
+            console.log(document.documentElement)
+        }
+        Telegram.WebApp.onEvent('themeChanged', setThemeClass);
+        setThemeClass();
+
+    </script>
 </head>
 <body>
 
@@ -14,11 +25,34 @@
         <option value="3">Test 3</option>
     </select>
 
-    <button class="border-2 border-gray-900 px-2 py-1.5">
+    <button class="border-2 border-gray-900 px-2 py-1.5" onclick="showPopup()">
         Submit
     </button>
 
 </section>
+
+<script type="application/javascript">
+    Telegram.WebApp.ready();
+
+    function showPopup() {
+        Telegram.WebApp.showPopup({
+            title: 'test',
+            message: 'test test test',
+            buttons: [
+                {
+                    id: '',
+                    type: 'close',
+                    text: 'text button close'
+                },
+                {
+                    id: '',
+                    type: 'ok',
+                    text: 'text button ok'
+                }
+            ]
+        })
+    }
+</script>
 
 </body>
 </html>
