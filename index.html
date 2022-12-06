@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-<style>
-  .bg-white {
-    background: white;
-  }
 
-  .red {
-    color: red;
-  }
-</style>
+<section class="container flex flex-row justify-around mx-auto pt-10">
+    <select>
+        <option value="1">Test 1</option>
+        <option value="2">Test 2</option>
+        <option value="3">Test 3</option>
+    </select>
 
-<div class="bg-white">
-  <h1 class="red">
-    Title
-  </h1>
-</div>
+    <button class="border-2 border-gray-900 px-2 py-1.5">
+        Submit
+    </button>
+
+</section>
 
 </body>
 </html>
