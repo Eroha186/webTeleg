@@ -16,20 +16,24 @@
 
     </script>
 </head>
-<body>
+<body class="bg-white w-full h-full">
 
-<section class="container flex flex-row justify-around mx-auto pt-10 bg-white">
+<section class="container flex flex-row justify-around mx-auto pt-10">
     <select>
         <option value="1">Test 1</option>
         <option value="2">Test 2</option>
         <option value="3">Test 3</option>
     </select>
 
-    <button class="border-2 border-gray-900 px-2 py-1.5" onclick="showPopup()">
+    <button class="border-2 border-gray-900 px-2 py-1.5 text-2xl" onclick="showPopup()">
         Submit
     </button>
 
 </section>
+
+<div id="user">
+
+</div>
 
 <script type="application/javascript">
     Telegram.WebApp.ready();
@@ -52,6 +56,9 @@
             ]
         })
     }
+
+    document.querySelector('#user').innerHTML = Telegram.WebApp.WebAppUser
+
 </script>
 
 </body>
