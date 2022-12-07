@@ -1,7 +1,7 @@
 <template>
 <div class="flex flex-col">
   <router-view/>
-  <div v-if="hueta">
+  <div>
     <navbar/>
   </div>
 </div>
@@ -9,11 +9,5 @@
 
 
 <script setup>
-import { computed } from 'vue'
-import {useRoute} from "vue-router";
-
-const route = useRoute()
-const hueta = computed(() => {
-  return route.name !== 'welcome'
-})
+import navbar from '@/components/common/Navbar.vue'
 </script>
