@@ -19,7 +19,7 @@
         tg.MainButton.show();
 
         Telegram.WebApp.onEvent('mainButtonClicked', function(){
-            tg.sendData(JSON.stringify(tg.initDataUnsafe.user));
+            tg.sendData('get User');
         });
     </script>
   </body>
