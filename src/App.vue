@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import {login} from "@/api/user";
+  import {loginApi} from "@/api/user";
 
   export default {
     mounted() {
@@ -20,7 +20,7 @@
     },
     methods: {
       async login() {
-        await login({
+        await loginApi({
           id: Telegram.WebApp.initDataUnsafe.id,
           name: Telegram.WebApp.initDataUnsafe.username,
         })
