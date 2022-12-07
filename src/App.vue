@@ -6,6 +6,12 @@
     <div v-data="a">
       {{ a }}
     </div>
+    <div v-data="b">
+      {{ b }}
+    </div>
+    <div v-data="c">
+      {{ c }}
+    </div>
   </div>
 </template>
 
@@ -14,6 +20,8 @@
   import {onMounted, ref} from "vue"
 
   const a = ref()
+  const b = ref()
+  const c = ref()
 
   onMounted(() => {
     Telegram.WebApp.MainButton
@@ -23,6 +31,8 @@
           await login()
         })
     a.value = JSON.stringify(Telegram.WebApp.initDataUnsafe)
+    b.value = Telegram.WebApp.initDataUnsafe.id
+    c.value = Telegram.WebApp.initDataUnsafe.username
   })
 
   const login = async () => {
