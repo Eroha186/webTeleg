@@ -3,6 +3,9 @@
     <img alt="Vue logo" class="logo mx-auto" src="@/assets/logo.png"/>
     <img alt="Vue logo" class="logo mx-auto" src="@/assets/dc.png"/>
     <button @click="login">Отправить</button>
+    <div v-data="a">
+      {{ a }}
+    </div>
   </div>
 </template>
 
@@ -11,7 +14,6 @@
   import {onMounted, ref} from "vue"
 
   const a = ref()
-  a.value = 1
 
   onMounted(() => {
     Telegram.WebApp.MainButton
@@ -20,6 +22,7 @@
         .onClick(async () => {
           await login()
         })
+    a.value = JSON.stringify(Telegram.WebApp.initDataUnsafe)
   })
 
   const login = async () => {
