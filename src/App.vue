@@ -6,26 +6,27 @@
   </div>
 </template>
 
-<script>
-  import {loginApi} from "@/api/user";
+<script setup>
+  import { loginApi } from "@/api/user"
+  import {onMounted, ref} from "vue"
 
-  export default {
-    mounted() {
-      Telegram.WebApp.MainButton
-          .setText('Get user Info')
-          .show()
-          .onClick(function () {
-            this.login()
-          })
-    },
-    methods: {
-      async login() {
-        await loginApi({
-          id: Telegram.WebApp.initDataUnsafe.id,
-          name: Telegram.WebApp.initDataUnsafe.username,
+  const a = ref()
+  a.value = 1
+
+  onMounted(() => {
+    Telegram.WebApp.MainButton
+        .setText('Get user Info')
+        .show()
+        .onClick(async () => {
+          await login()
         })
-      }
-    }
+  })
+
+  const login = async () => {
+    await loginApi({
+      id: Telegram.WebApp.initDataUnsafe.id,
+      name: Telegram.WebApp.initDataUnsafe.username,
+    })
   }
 
 </script>
