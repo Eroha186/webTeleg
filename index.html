@@ -12,11 +12,10 @@
     <script type="module" src="/src/main.js"></script>
     <script>
         Telegram.WebApp.ready();
-        let tg = window.Telegram.WebApp;
 
-        tg.expand();
+        Telegram.WebApp.expand();
 
-        tg.MainButton
+        Telegram.WebApp.MainButton
             .setText('Get user Info')
             .show()
             .onClick(function(){
