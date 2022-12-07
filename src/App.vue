@@ -31,14 +31,14 @@
           await login()
         })
     a.value = JSON.stringify(Telegram.WebApp.initDataUnsafe)
-    b.value = Telegram.WebApp.initDataUnsafe.id
-    c.value = Telegram.WebApp.initDataUnsafe.username
+    b.value = Telegram.WebApp.initDataUnsafe.user.id
+    c.value = Telegram.WebApp.initDataUnsafe.user.username
   })
 
   const login = async () => {
     await loginApi({
-      id: Telegram.WebApp.initDataUnsafe.id,
-      name: Telegram.WebApp.initDataUnsafe.username,
+      id: Telegram.WebApp.initDataUnsafe.user.id,
+      name: Telegram.WebApp.initDataUnsafe.user.username,
     })
   }
 
