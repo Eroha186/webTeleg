@@ -11,18 +11,7 @@
     <div id="app" class="w-full h-screen"></div>
     <script type="module" src="/src/main.js"></script>
     <script>
-        Telegram.WebApp.ready();
-
-        Telegram.WebApp.sendData(new Date().toString());
-
         Telegram.WebApp.expand();
-
-        Telegram.WebApp.MainButton
-            .setText('Get user Info')
-            .show()
-            .onClick(function(){
-                document.getElementById('dc').remove()
-            });
     </script>
   </body>
 </html>

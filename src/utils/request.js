@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const service = axios.create({
-    baseURL: process.env.NODE_ENV === 'production' ? '/' : '/',
+    baseURL: 'https://4f7e-95-170-152-45.in.ngrok.io/',
     timeout: 300000
 })
 
