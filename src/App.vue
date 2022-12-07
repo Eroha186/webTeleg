@@ -3,13 +3,13 @@
     <img alt="Vue logo" class="logo mx-auto" src="@/assets/logo.png"/>
     <img alt="Vue logo" class="logo mx-auto" src="@/assets/dc.png"/>
     <button @click="login">Отправить</button>
-    <div v-data="a">
+    <div class="break-words text-white" v-data="a">
       {{ a }}
     </div>
-    <div v-data="b">
+    <div class="break-words text-white" v-data="b">
       {{ b }}
     </div>
-    <div v-data="c">
+    <div class="break-words text-white" v-data="c">
       {{ c }}
     </div>
   </div>
