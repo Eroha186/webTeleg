@@ -3,7 +3,7 @@
     <div class="flex flex-col items-center pb-10">
       <div class="relative">
         <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="@/assets/user.jpg" alt="Bonnie image"/>
-        <div class="absolute flex flex-col items-center justify-center w-[37px] h-[37px] text-sm font-bold right-0 bottom-0 rounded-full bg-green-500 text-white">
+        <div class="absolute flex flex-col items-center custom-border-color border-4 justify-center w-[37px] h-[37px] text-sm font-bold right-0 bottom-0 rounded-full bg-green-500 text-white">
           <span>
             10%
           </span>
@@ -14,3 +14,10 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.custom-border-color {
+  border-color: #103141;
+  opacity: 1;
+}
+</style>
