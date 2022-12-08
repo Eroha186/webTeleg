@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full fixed bottom-0 bg-[#003b57] shadow-menu-shadow">
+  <nav class="w-full fixed bottom-0 bg-[#23a0bf] dark:bg-[#003b57]">
     <ul class="container mx-auto grid grid-cols-3 grid-rows-1">
       <li v-for="item in menuItems" :class="['text-lg font-bold text-white px-5 py-5 text-center', isActive(item.path)]">
         <router-link :to="item.path">
@@ -38,6 +38,12 @@ const isActive = (path) => {
 
 <style scoped>
   .active-tab {
-    background: #23a0bf;
+    background: #56C5DF;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .active-tab {
+      background: #23a0bf;
+    }
   }
 </style>
