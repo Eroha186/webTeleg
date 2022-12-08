@@ -1,18 +1,11 @@
 <template>
-  <div>
-    <h1>test</h1>
+  <div class="p-1 grid grid-cols-1 grid-rows-auto gap-y-2.5">
+    <UserCard/>
+    <MatchList/>
   </div>
-  <pre></pre>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-
-onMounted(() => {
-  console.log(111)
-})
+import UserCard from '@/components/profilePage/UserCard.vue'
+import MatchList from '@/components/common/MatchList.vue'
 </script>
-
-<style scoped>
-
-</style>

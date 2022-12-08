@@ -1,10 +1,10 @@
 <template>
-<div class="flex flex-col">
-  <router-view/>
+  <div class="pb-10">
+    <router-view/>
+  </div>
   <div v-if="hasNavbar">
     <navbar/>
   </div>
-</div>
 </template>
 
 

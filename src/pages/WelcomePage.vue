@@ -1,8 +1,10 @@
 <template>
-  <div class="w-full mx-auto container relative flex flex-col items-center top-1/2 -translate-y-1/2">
-    <img alt="Vue logo" class="logo mx-auto" src="@/assets/logo.png"/>
-    <img alt="Vue logo" class="logo mx-auto" src="@/assets/dc.png"/>
-    <button class="px-5 py-2.5 bg-amber-600 text-white" @click="loginMock">Login</button>
+  <div class="flex flex-col">
+    <div class="w-full mx-auto container relative flex flex-col items-center top-1/2">
+      <img alt="Vue logo" class="logo mx-auto" src="@/assets/logo.png"/>
+      <img alt="Vue logo" class="logo mx-auto" src="@/assets/dc.png"/>
+      <button class="px-5 py-2.5 bg-amber-600 text-white" @click="loginMock">Login</button>
+    </div>
   </div>
 </template>
 
