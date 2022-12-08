@@ -30,3 +30,9 @@
     </details>
   </div>
 </template>
+
+<style scoped>
+  details summary::-webkit-details-marker {
+    display:none;
+  }
+</style>
