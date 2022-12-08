@@ -1,3 +1,7 @@
 <template>
-  <h1>main page</h1>
+  <MatchList/>
 </template>
+
+<script setup>
+import MatchList from '@/components/common/MatchList.vue'
+</script>

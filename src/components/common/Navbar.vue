@@ -1,8 +1,8 @@
 <template>
   <nav class="w-full fixed bottom-0 bg-[#23a0bf] dark:bg-[#003b57]">
     <ul class="container mx-auto grid grid-cols-3 grid-rows-1">
-      <li v-for="item in menuItems" :class="['text-lg font-bold text-white px-5 py-5 text-center', isActive(item.path)]">
-        <router-link :to="item.path">
+      <li v-for="item in menuItems" :class="[isActive(item.path)]">
+        <router-link :to="item.path" class="text-lg font-bold text-white w-full text-center py-5 inline-block">
           {{ item.title }}
         </router-link>
       </li>
@@ -25,8 +25,12 @@ const menuItems = [
     path: '/profile'
   },
   {
-    title: 'mainPAge',
+    title: 'Все игры',
     path: '/main'
+  },
+  {
+    title: 'Результат',
+    path: '/result'
   }
 ]
 

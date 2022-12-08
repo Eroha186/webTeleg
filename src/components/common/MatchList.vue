@@ -5,7 +5,7 @@
         <div class="grid grid-cols-3 grid-rows-1 w-full text-center dark:text-white">
           <div class="flex flex-row items-center">
             <div>
-              <img class="w-10 h-10 mr-2 rounded-full" src="@/assets/user.jpg" alt="Bonnie image"/>
+              <img class="w-10 h-10 mr-2 rounded-full mirror" src="@/assets/user.jpg" alt="Bonnie image"/>
             </div>
             <div>Name 1</div>
           </div>
@@ -53,5 +53,8 @@
   }
   details:last-child .description {
     padding-top: 0.75rem;
+  }
+  .mirror {
+    transform: scale(-1,1);
   }
 </style>

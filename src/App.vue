@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="p-1">
     <router-view/>
   </div>
   <div v-if="hasNavbar">
