@@ -19,12 +19,13 @@ onMounted(() => {
   mainButton
       .setText('Get user Info')
       .show()
-      .onClick(async () => {
-        await login()
+      .onClick(() => {
+        loginMock()
       })
 })
 
 const loginMock = () => {
+  mainButton.hide()
   router.push({name: 'main'})
 }
 
