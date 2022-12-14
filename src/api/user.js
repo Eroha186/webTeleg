@@ -7,3 +7,17 @@ export function loginApi(userInfo) {
         data: userInfo
     })
 }
+
+export function getUserInfo() {
+    return request({
+        url : 'api/user-info',
+        method: 'get'
+    })
+}
+
+export function getUserGame() {
+    return request({
+        url: 'api/user-game',
+        method: 'get'
+    })
+}

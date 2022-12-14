@@ -1,6 +1,11 @@
 <template>
   <div class="grid grid-cols-1 grid-rows-auto gap-y-2.5">
-    <UserCard/>
+    <UserCard
+      name="Dmitry"
+      first-name="Efanov"
+      nick-name="@eroha186"
+      percentage-of-wins="77"
+    />
     <MatchList/>
   </div>
 </template>
