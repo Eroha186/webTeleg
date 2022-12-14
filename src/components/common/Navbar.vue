@@ -17,10 +17,6 @@ const route = useRoute()
 
 const menuItems = [
   {
-    title: 'Welcome',
-    path: '/'
-  },
-  {
     title: 'Профиль',
     path: '/profile'
   },

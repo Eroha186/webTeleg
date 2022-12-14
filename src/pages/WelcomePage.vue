@@ -13,8 +13,10 @@ import { loginApi } from "@/api/user"
 import { onMounted } from "vue"
 import router from "@/router";
 
+const mainButton = Telegram.WebApp.MainButton;
+
 onMounted(() => {
-  Telegram.WebApp.MainButton
+  mainButton
       .setText('Get user Info')
       .show()
       .onClick(async () => {
@@ -31,6 +33,7 @@ const login = async () => {
     id: Telegram.WebApp.initDataUnsafe.user.id,
     name: Telegram.WebApp.initDataUnsafe.user.username,
   })
+  mainButton.hide()
 }
 
 </script>
