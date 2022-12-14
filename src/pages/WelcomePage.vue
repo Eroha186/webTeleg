@@ -42,7 +42,7 @@ const loginMock = async () => {
 
 const login = async () => {
   await loginApi({
-    telegram_id: Telegram.WebApp.initDataUnsafe.user.id,
+    telegram_id: `${Telegram.WebApp.initDataUnsafe.user.id}`,
     name: Telegram.WebApp.initDataUnsafe.user.first_name,
     surname: Telegram.WebApp.initDataUnsafe.user.last_name,
     username: Telegram.WebApp.initDataUnsafe.user.username,
