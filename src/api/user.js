@@ -10,8 +10,11 @@ export function loginApi(userInfo) {
 
 export function getUserInfo() {
     return request({
-        url : 'api/user-info',
-        method: 'get'
+        url: 'api/user/profile',
+        method: 'get',
+        headers: {
+            Authorization: `Bearer ${localStorage.getItem('token') || ''}`
+        }
     })
 }
 

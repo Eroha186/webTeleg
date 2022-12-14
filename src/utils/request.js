@@ -1,13 +1,8 @@
 import axios from 'axios'
 
-const token = localStorage.getItem('token') || '';
-
 const service = axios.create({
     baseURL: 'https://f059-95-170-152-45.in.ngrok.io/',
-    timeout: 300000,
-    headers: {
-        Authorization: `Bearer ${token}`
-    }
+    timeout: 300000
 })
 
 service.interceptors.request.use((request) => {
